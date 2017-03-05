@@ -1,0 +1,49 @@
+<?page title="Gerenciar Movimentação" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="MovimentacaoGerenciar" title="Gerenciar Movimentacao" border="normal" width="100%" apply="zkAlfa.CMovimentacaoGerenciar">
+
+		<grid>
+			<rows>
+				<row>
+					<button id="btnCriar" label="Incluir" onClick="" width="200px" />
+					<button id="btnLista" label="Lista" onClick="" width="200px"/>
+					<button id="btnApagar" label="Apagar" onClick="" width="200px"/>
+				</row>
+			</rows>
+		</grid>
+
+		<grid>
+			<columns>
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<listbox id="lstbxmovimentacao" mold="paging" pageSize="5"
+						model="@{MovimentacaoGerenciar$composer.listaMovimentacao}"
+						width="100%" emptyMessage="Nenhum informação na tabela."
+						visible="true">
+						<listhead sizable="true">
+							<listheader label="Id" width="50%" align="center" />
+							<listheader label="Data" width="50%" align="center" />
+							<listheader label="Conta" width="50%"	align="center" />
+							<listheader label="Descricao" width="50%" align="center" />
+							<listheader label="Tipo Movimentação" width="50%"	align="center" /> 
+							<listheader label="Valor" width="50%" align="center" />
+						</listhead>
+						<listitem self="@{each=registro}"
+							value="@{registro}">
+							<listcell label="@{registro.id}" />
+							<listcell label="@{registro.data}" />
+							<listcell label="@{registro.conta}" />
+							<listcell label="@{registro.descricao}" />
+							<listcell label="@{registro.tipoMovimentacao}" />
+							<listcell label="@{registro.valor}" />
+						</listitem>
+					</listbox>
+				</row>
+			</rows>
+		</grid>
+
+
+	</window>
+</zk>

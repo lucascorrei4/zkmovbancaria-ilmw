@@ -1,0 +1,80 @@
+<?page title="Manutencao Movimentacao" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="MovimentacaoManutencao" title="Manutencao Movimentacao" border="normal" width="100%" apply="zkAlfa.CMovimentacaoManutencao">
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Id" />
+						<intbox id="intbxId" width="50" value="@{MovimentacaoManutencao$composer.id}" readonly="true"/>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Conta" />
+						<combobox id="contaCombobox" model="${MovimentacaoManutencao$composer.typesConta}">
+		                    <template name="model">
+		                        <comboitem label="${each}" />
+		                    </template>
+                    	</combobox>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Tipo Movimentacao" />
+						<combobox id="combo" model="${MovimentacaoManutencao$composer.typesModel}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Data" />
+						<textbox id="textbxData" width="50" value="@{MovimentacaoManutencao$composer.data}" readonly="true"/>						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Descricao" />
+						<textbox id="textbxDescricao" width="50"	value="@{MovimentacaoManutencao$composer.descricao}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Valor" />
+						<intbox id="intbxValor" width="50" value="@{MovimentacaoManutencao$composer.valor}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<button id="btnGravar" label="Gravar" onClick=""
+						width="200px" />
+					<button id="btnCancelar" label="Cancelar" onClick=""
+						width="200px" />
+				</row>
+			</rows>
+		</grid>
+
+	</window>
+</zk>

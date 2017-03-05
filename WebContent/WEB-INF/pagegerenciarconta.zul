@@ -1,0 +1,56 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Gerenciar Conta" border="normal" width="100%" apply="zkAlfa.CGerenciarContas">
+
+		<grid>
+			<rows>
+				<row>
+					<button id="btnCriar" label="Incluir" onClick="" width="500px" />
+					<button id="btnLista" label="Lista" onClick="" />
+					<button id="btnApagar" label="Apagar" onClick="" />
+					<button id="btnAlterar" label="Alterar" onClick="" />
+				</row>
+			</rows>
+		</grid>
+
+		<grid>
+			<columns>
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<listbox id="lstbxcontas" mold="paging" pageSize="5"
+						model="@{gerenciarconta$composer.historicoMultiplicacao}"
+						width="100%" emptyMessage="Nenhum informação na tabela."
+						visible="true">
+						<listhead sizable="true">
+							<listheader label="Id" width="50%"
+								align="center" />
+							<listheader label="Titular" width="50%"
+								align="center" />
+							<listheader label="Numero" width="50%"
+								align="center" />
+							<listheader label="Banco" width="50%"
+								align="center" />
+							<listheader label="Agencia" width="50%"
+								align="center" />
+							<listheader label="Endereço" width="50%"
+								align="center" />
+						</listhead>
+						<listitem self="@{each=registro}"
+							value="@{registro}">
+							<listcell label="@{registro.id}" />
+							<listcell label="@{registro.titular}" />
+							<listcell label="@{registro.numero}" />
+							<listcell label="@{registro.banco}" />
+							<listcell label="@{registro.agencia}" />
+							<listcell label="@{registro.endereco}" />
+						</listitem>
+					</listbox>
+				</row>
+			</rows>
+		</grid>
+
+
+	</window>
+</zk>

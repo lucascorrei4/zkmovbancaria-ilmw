@@ -1,0 +1,13 @@
+<?page title="Auto Generated index.zul"?>
+<window id="calculadora" title="Gerenciamento Bancario" border="normal"
+	width="100%" apply="zkAlfa.CIndex">
+	<grid>
+		<rows>
+			<row>
+				<button id="btnConta" label="Gerenciar Conta" width="500px" onClick="" />
+				<button id="btnMovimentacao" label="Gerenciar Movimentação" width="500px" onClick="" />
+			</row>
+
+		</rows>
+	</grid>
+</window>

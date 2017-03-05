@@ -1,0 +1,85 @@
+<?page title="Manutencao Conta" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="ContaManutencao" title="Manutencao Conta"
+		border="normal" width="100%" apply="zkAlfa.CContaManutencao">
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Id" width="50" />
+						<intbox id="intbxId" width="50"
+							value="@{ContaManutencao$composer.id}" readonly="true" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Banco" />
+						<intbox id="intbxBanco" width="50"
+							value="@{ContaManutencao$composer.banco}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Agencia" />
+						<intbox id="intbxAgencia" width="50"
+							value="@{ContaManutencao$composer.agencia}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Numero" />
+						<intbox id="intbxNumero" width="50"
+							value="@{ContaManutencao$composer.numero}" />
+						<label class="error"
+							value="@load(vmsgs['numero'])" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Titular" />
+						<textbox id="intbxTitular" width="50"
+							value="@{ManutencaoConta$composer.titular}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<grid>
+			<rows>
+				<row>
+					<cell>
+						<label value="Endereço" />
+						<textbox id="intbxEndereco" width="50"
+							value="@{ManutencaoConta$composer.endereco}" />
+					</cell>
+				</row>
+			</rows>
+		</grid>
+
+
+		<grid>
+			<rows>
+				<row>
+					<button id="btnGravar" label="Gravar" onClick=""
+						width="200px" />
+				</row>
+			</rows>
+		</grid>
+
+	</window>
+</zk>
