@@ -6,6 +6,8 @@ Trabalho RMI Movimentação Bancária ZK
 * Zk Framework
 * RMI
 
+* Obs.: Desenvolvido e executado com Java 8 e Tomcat 8.
+
 # Organização do projeto
 Classes de Modelo 
 Pacote "br.com.financas.modelo"
